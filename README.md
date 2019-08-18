@@ -1,5 +1,5 @@
-# Walkability-in-Dupage-County
- Map details
+# Walkability in Dupage County
+
 Accessing GIS data that is accurate and timely in terms of updates is challenging to come by, however this lesson revealed the significant benefits of using Open Street Map particularly with community-level spatial ananlysis. As the lesson progressed one of the cartographic challenges was balancing proper visual hierachy with a vast amount of data, primarily lines and to a lesser degree, polygons. The challenge was showing enough map features at a scale that would be readable. For this reason, a smaller map is used in this landing page while a much larger scale with more detail and features can be found at the higher resolution link.
 
 Key lessons learned:
