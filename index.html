@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset=utf-8 />
+    <title>Walkability and Recreation in Dupage County, IL</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #d2bb46;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 400;
+            color: #000000;
+        }
+
+        section {
+            width: 80%;
+            margin: 10px auto;
+        }
+
+        h1 {
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 300;
+            font-size: 2.5em;
+            /* The em unit. 2.5x the current size */
+            letter-spacing: .03em;
+            text-transform: uppercase;
+        }
+
+        h2 {
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 700;
+            color: black;
+            font-size: 1.25em;
+            letter-spacing: .04em;
+        }
+
+        p {
+            font-size: 1em;
+            line-height: 1.5em;
+        }
+
+        a {
+            color: blue;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin: 10px 0
+        }
+
+        #map {
+            width: 100%;
+            margin: 0px auto;
+
+        }
+
+        .max-image-width {
+            width: 100%;
+        }
+
+        .linkbox {
+            margin: 3px 0 20px 0;
+            display: block;
+            font-weight: 300;
+        }
+
+        hr {
+            border: 0px;
+            border-bottom: 1px solid #3d3d3d;
+            padding-top: 20px;
+        }
+
+        /* Use float property to make two-column layout. */
+
+        .first-column {
+            float: left;
+            width: 48%;
+            padding-right: 20px;
+        }
+
+        .column {
+            float: left;
+            width: 48%;
+        }
+
+        /* Clear floats after the columns */
+
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* When browser is 800px wide or less */
+
+        @media screen and (max-width: 800px) {
+            .first-column,
+            .column {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Add map to top of page and make it stretch to fill browser window. 
+    <img class="max-image-width" src="graphics/Dupage%20County.jpg">-->
+
+    <!-- Create a two column layout for map information. -->
+    <section>
+        <!--       <a href='graphics/Dupage%20County%20large%20size.png' class="linkbox">Full screen version</a>-->
+
+        <h1><b>Walkability and Recreation Options in Dupage County, IL...</b></h1>
+        <h2>Created by: Tom Scholten</h2>
+        <p>
+            University of Kentucky, Spring 2019.
+        </p>
+        <div class="row">
+
+            <!-- First column, the left half -->
+            <div class="first-column">
+                <p>Dupage County is a suburban county in the western portion of the greater Chicago metropolitan area. The county is ranked second in Illinois in terms of population which, as of 2010, was 916,000 people. It is one of the most highly developed and suburbanized counties in Illinois and in the U.S. Land area makes up 327 square miles and 8.9 miles is comprised of water, primarily the Fox and Dupage Rivers.</p>
+
+                <p>The Forest Preserve District of DuPage County owns and manages 25,000 acres (10,000 ha) of prairies, woodlands and wetlands. More than 4 million visitors each year enjoy 60 forest preserves, 145 miles of trails, and five education centers. Local urban parks include Lombard's Lilacia Park, Naperville's Centennial Beach, Woodridge's Cypress Cove Family Aquatic Park and Wheaton's Cosley Zoo. Privately funded attractions include Lisle's Morton Arboretum. In the 1980s, DuPage County also had another major attraction, Ebenezer Floppen Slopper's Wonderful Water slides in Oakbrook Terrace, which today, stands abandoned and neglected. The Illinois Prairie Path, a 61-mile (98 km) rail-to-trail multi-use path, runs through Cook, DuPage and Kane Counties. It intersects with the Great Western Trail at several points, as well as the Fox River Trail at a few points. Source:<a href="https://github.com/Tscholten1?tab=repositories/">Wikipedia</a></p>
+
+                <p>Even with the benefit of a high quality forest preserve and park district, the suburban landscape in Dupage County presents challenges for citizens who seek nearby natural amenities. The built environment contains a patchwork of dedicated bike paths and walkable sidewalks. A driving ethos that minimizes the rights of bicyclists and runners diminishes the possibility for an impromptu ride or run in the landscape of housing developments and strip malls. Several studies has found that the presence of community amenities creates a sense of "community" and belonging that is often lost in the suburbs.</p>
+
+                <p><b>Research on suburban geography:</b></p>
+                <p><b><a href="articles/Suburban%20Ways%20of%20Living.pdf">Suburban Ways of Living</a></b></p>
+                <p><b><a href="articles/The%20Importance%20of%20Place.pdf">The Importance of Place</a></b></p>
+
+                <h3>Map details</h3>
+                <p>Accessing GIS data that is accurate and timely in terms of updates is challenging to come by, however this lesson revealed the significant benefits of using Open Street Map particularly with community-level spatial ananlysis. As the lesson progressed one of the cartographic challenges was balancing proper visual hierachy with a vast amount of data, primarily lines and to a lesser degree, polygons. The challenge was showing enough map features at a scale that would be readable. For this reason, a smaller map is used in this landing page while a much larger scale with more detail and features can be found at the higher resolution link.</p>
+                <p>Key lessons learned from this lesson:</p>
+                <ul></ul>
+                <li>Work with Open Street Map to acquire local/regional micro data</li>
+                <li>Perform geoprocessing (e.g. spatial analysis) using the buffer tool</li>
+                <li>Use QuickOSM to acquire OSM tags to expedite the data acquisition procress by querying key values of map data</li>
+                <li>Use QuickOSM Processing Toolbox to remove unnecessary data fields</li>
+                <li>Refine the symbology process of point, line, and polygon features by exploring the tools and methods in Qgis</li>
+                <li>Add multiple ground control points using Add Point feature (found in the Georefencer tool)</li>
+                <li>Create vector data layers such as points, lines, and polygons using Qgis tools (Layer>Create Layer)</li>
+                <li>Use the Select by Location tool to cafes that intersect one mile buffers around each park. Using this tool for this process preserved key attribute information which would have been lost if the clip or intersection tool were used.</li>
+                <li>Effort was also spent creating the proper visual hierarchy for the maps and ensuring an attractive map product. Coordinate Reference System: NAD83(HARN)/Illinois East (ftUS) EPSG:3443. Basemap: Open Street Map. Other data provided by The Appalachian Trail Conservancy (trail shapefile), Natural Earth (10m graticule).</li>
+
+            </div>
+
+            <!-- Second column, the right half -->
+            <div class="column">
+                <!-- Photo of Area of Interest -->
+                <img class="max-image-width" src="graphics/Dupage%20County.jpeg">
+                <a href='graphics/Dupage%20County.jpeg' class="linkbox"><b><a>Click to view larger map version with more detail</a></b>
+                <p class="linkbox"><b>This map shows points of interest such as bike trails, parks in relation to public amenities such as cafes and public restrooms. A half-mile buffer around each park provides a visual of how much walkable area is available throughout Dupage County.</b></p>
+
+                <!-- Photo of Area of Interest -->
+                <!--                <img class="max-image-width" src="path/to/image.jpg">-->
+                <!--<img src="graphics/Dupage%20County%20in%20Illinois.jpg" style="max-height:70%" alt="Dupage County in relation to the state of Illinois">
+                <p class="linkbox"><b>Dupage County in relation to the state of Illinois</b></p>-->
+
+            </div>
+        </div>
+
+
+        <!--
+<h2>Map created by: Tom Scholten, NMP MAP 671</h2>
+-->
+        <!--<ul>
+</ul>
+<p><a href="geojson/Bike Trails2.geojson">link to the bike trails GeoJSON</a></p>
+<p><a href="geojson/Parks2.geojson">link to the parks GeoJSON</a></p>
+<p><a href="geojson/DupageCounty%20Amenity%20Points.geojson">link to the Dupage County Amenity Points GeoJSON</a></p>
+<p><a href="geojson/Bike%20Shops.geojson">link to the bike shops GeoJSON</a></p>-->
+
+        <hr>
+        <ul>
+            <li>See my projects on GitHub: <a href="https://github.com/Tscholten1?tab=repositories/">New Maps Plus</a></li>
+            <li>Visit my <a href='https://tscholten1.github.io/mapwurks/'>mapping portfolio</a>.</li>
+            <!-- or any other social media site -->
+        </ul>
+    </section>
+
+</body>
+
+</html>
